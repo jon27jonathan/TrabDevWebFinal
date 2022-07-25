@@ -75,11 +75,12 @@
                         </div>
                     </div>
                 </div>
-                        <%  Funcionario usuario = (Funcionario) session.getAttribute("usuario");
+                <%  Funcionario usuario = (Funcionario) session.getAttribute("usuario");
                     if (usuario.getId() == aux.getId_funcionario() || aux.getId_funcionario() == 0) { %>
                 <button class="btn btn-primary" type="submit">Enviar</button>
-                <%  }
-                %>
+                <%  } else { %>
+                        <jsp:forward page="../AreaRestrita.jsp" />
+                <% } %>
                 <a href="VendaController?acao=mostrar" class="btn btn-outline-danger">Retornar</a>
             </form>
         </div>

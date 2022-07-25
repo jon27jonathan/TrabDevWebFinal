@@ -26,7 +26,7 @@ public class FuncionarioController extends HttpServlet {
             case "mostrar":
                 meusFuncionarios = funcionarioDAO.getListaFuncionario();
                 request.setAttribute("meusFuncionarios", meusFuncionarios);
-                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ListaFuncionarioView.jsp");
+                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ViewListaFunc.jsp");
                 mostrar.forward(request, response);
                 break;
 
@@ -67,7 +67,7 @@ public class FuncionarioController extends HttpServlet {
 
                 meusFuncionarios = funcionarioDAO.getListaFuncionario();
                 request.setAttribute("meusFuncionarios", meusFuncionarios);
-                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ListaFuncionarioView.jsp");
+                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ViewListaFunc.jsp");
                 aposexcluir.forward(request, response);
                 break;
         }

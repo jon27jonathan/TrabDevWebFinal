@@ -26,7 +26,7 @@ public class ClienteController extends HttpServlet {
             case "mostrar":
                 meusClientes = clienteDAO.getListaCliente();
                 request.setAttribute("meusClientes", meusClientes);
-                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ListaClienteView.jsp");
+                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ViewListaCli.jsp");
                 mostrar.forward(request, response);
                 break;
 
@@ -72,7 +72,7 @@ public class ClienteController extends HttpServlet {
 
                 meusClientes = clienteDAO.getListaCliente();
                 request.setAttribute("meusClientes", meusClientes);
-                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ListaClienteView.jsp");
+                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ViewListaCli.jsp");
                 aposexcluir.forward(request, response);
                 break;
         }

@@ -28,7 +28,7 @@ public class CompraController extends HttpServlet {
             case "mostrar":
                 meusCompras = compraDAO.getListaCompra();
                 request.setAttribute("meusCompras", meusCompras);
-                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ListaCompraView.jsp");
+                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ViewListaComp.jsp");
                 mostrar.forward(request, response);
                 break;
 
@@ -71,7 +71,7 @@ public class CompraController extends HttpServlet {
 
                 meusCompras = compraDAO.getListaCompra();
                 request.setAttribute("meusCompras", meusCompras);
-                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ListaCompraView.jsp");
+                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ViewListaComp.jsp");
                 aposexcluir.forward(request, response);
                 break;
         }

@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*,Application.*" %>
+<%@ page import="java.util.*,Aplicacao.*" %>
 <!DOCTYPE html>
 <html>
     <head>

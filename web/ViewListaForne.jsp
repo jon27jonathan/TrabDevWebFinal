@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.util.*,Application.*" %>
+<%@page import="java.util.*,Aplicacao.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,8 +14,8 @@
                     <jsp:forward page="login.jsp" />
         <%      } else {
                     Funcionario usuario = (Funcionario) session.getAttribute("usuario");
-                    // Validação baseada no Papel do Funcionário, só o Vendedor pode fazer
-                    if (usuario.getPapel() != 1) {%>
+                    // Validação baseada no Papel do Funcionário, só o Comprador pode fazer
+                    if (usuario.getPapel() != 2) {%>
                         <jsp:forward page="index.jsp" />
                     <%}
                 }
@@ -24,17 +24,17 @@
             
             <jsp:include page="navbar.jsp" />
             
-            <h1>Lista de Clientes</h1>
+            <h1>Lista de Fornecedores</h1>
             <p></p>
-            <a href="ClienteController?acao=incluir" class="btn btn-outline-primary">Incluir</a>
+            <a href="FornecedorController?acao=incluir" class="btn btn-outline-primary">Incluir</a>
             <p></p>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">CPF</th>
+                            <th scope="col">Razão Social</th>
+                            <th scope="col">CNPJ</th>
                             <th scope="col">Endereco</th>
                             <th scope="col">Bairro</th>
                             <th scope="col">Cidade</th>
@@ -47,16 +47,16 @@
                     </thead>
                     <tbody>
                         <%
-                            ArrayList<Cliente> ListaCliente = (ArrayList<Cliente>) request.getAttribute("meusClientes");
-                            for (int i = 0; i < ListaCliente.size(); i++) {
-                                Cliente aux = ListaCliente.get(i);
-                                String link_editar = "ClienteController?acao=editar&id="+aux.getId();
-                                String link_excluir = "ClienteController?acao=excluir&id="+aux.getId();
+                            ArrayList<Fornecedor> ListaFornecedor = (ArrayList<Fornecedor>) request.getAttribute("meusFornecedores");
+                            for (int i = 0; i < ListaFornecedor.size(); i++) {
+                                Fornecedor aux = ListaFornecedor.get(i);
+                                String link_editar = "FornecedorController?acao=editar&id="+aux.getId();
+                                String link_excluir = "FornecedorController?acao=excluir&id="+aux.getId();
                         %>
                         <tr>
                             <td><%=aux.getId()%></td>
-                            <td><%=aux.getNome()%></td>
-                            <td><%=aux.getCpf()%></td>
+                            <td><%=aux.getRazao_social()%></td>
+                            <td><%=aux.getCnpj()%></td>
                             <td><%=aux.getEndereco()%></td> 
                             <td><%=aux.getBairro()%></td> 
                             <td><%=aux.getCidade()%></td> 

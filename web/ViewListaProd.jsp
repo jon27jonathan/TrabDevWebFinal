@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.util.*,Application.*" %>
+<%@ page import="java.util.*,Aplicacao.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,46 +24,42 @@
             
             <jsp:include page="navbar.jsp" />
             
-            <h1>Lista de Fornecedores</h1>
+            <h1>Lista de Produtos</h1>
             <p></p>
-            <a href="FornecedorController?acao=incluir" class="btn btn-outline-primary">Incluir</a>
+            <a href="ProdutoController?acao=incluir" class="btn btn-outline-primary">Incluir</a>
             <p></p>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Razão Social</th>
-                            <th scope="col">CNPJ</th>
-                            <th scope="col">Endereco</th>
-                            <th scope="col">Bairro</th>
-                            <th scope="col">Cidade</th>
-                            <th scope="col">Uf</th>
-                            <th scope="col">Cep</th>
-                            <th scope="col">Telefone</th>
-                            <th scope="col">Email</th>
+                            <th scope="col">Nome do Produto</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Preço Compra</th>
+                            <th scope="col">Preço Venda</th>
+                            <th scope="col">Quantidade Disponivel</th>
+                            <th scope="col">Liberado?</th>
+                            <th scope="col">Id Categoria</th>
                             <th scope="col"><div class="float-right">Ações</div><br></th>
                         </tr>
                     </thead>
                     <tbody>
                         <%
-                            ArrayList<Fornecedor> ListaFornecedor = (ArrayList<Fornecedor>) request.getAttribute("meusFornecedores");
-                            for (int i = 0; i < ListaFornecedor.size(); i++) {
-                                Fornecedor aux = ListaFornecedor.get(i);
-                                String link_editar = "FornecedorController?acao=editar&id="+aux.getId();
-                                String link_excluir = "FornecedorController?acao=excluir&id="+aux.getId();
+                            ArrayList<Produto> ListaProduto = (ArrayList<Produto>) request.getAttribute("meusProdutos");
+                            for (int i = 0; i < ListaProduto.size(); i++) {
+                                Produto aux = ListaProduto.get(i);
+                                String link_editar = "ProdutoController?acao=editar&id="+aux.getId();
+                                String link_excluir = "ProdutoController?acao=excluir&id="+aux.getId();
                         %>
                         <tr>
                             <td><%=aux.getId()%></td>
-                            <td><%=aux.getRazao_social()%></td>
-                            <td><%=aux.getCnpj()%></td>
-                            <td><%=aux.getEndereco()%></td> 
-                            <td><%=aux.getBairro()%></td> 
-                            <td><%=aux.getCidade()%></td> 
-                            <td><%=aux.getUf()%></td> 
-                            <td><%=aux.getCep()%></td> 
-                            <td><%=aux.getTelefone()%></td> 
-                            <td><%=aux.getEmail()%></td> 
+                            <td><%=aux.getNome_produto()%></td>
+                            <td><%=aux.getDescricao()%></td>
+                            <td><%=aux.getPreco_compra()%></td> 
+                            <td><%=aux.getPreco_venda()%></td> 
+                            <td><%=aux.getQuantidade_disponivel()%></td> 
+                            <td><%=aux.getLiberado_venda()%></td> 
+                            <td><%=aux.getId_categoria()%></td> 
                             <td><a href="<%=link_excluir%>" class="btn btn-outline-danger float-right">Excluir</a> <a href="<%=link_editar%>" class="btn btn-outline-secondary float-right">Editar</a> 
                             </td> 
                            

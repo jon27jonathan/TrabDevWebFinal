@@ -26,7 +26,7 @@ public class FornecedorController extends HttpServlet {
             case "mostrar":
                 meusFornecedores = fornecedorDAO.getListaFornecedor();
                 request.setAttribute("meusFornecedores", meusFornecedores);
-                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ListaFornecedorView.jsp");
+                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ViewListaForne.jsp");
                 mostrar.forward(request, response);
                 break;
 
@@ -72,7 +72,7 @@ public class FornecedorController extends HttpServlet {
 
                 meusFornecedores = fornecedorDAO.getListaFornecedor();
                 request.setAttribute("meusFornecedores", meusFornecedores);
-                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ListaFornecedorView.jsp");
+                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ViewListaForne.jsp");
                 aposexcluir.forward(request, response);
                 break;
         }

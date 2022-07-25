@@ -26,7 +26,7 @@ public class CategoriaController extends HttpServlet {
             case "mostrar":
                 meusCategorias = categoriaDAO.getListaCategoria();
                 request.setAttribute("meusCategorias", meusCategorias);
-                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ListaCategoriaView.jsp");
+                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/ViewListaCateg.jsp");
                 mostrar.forward(request, response);
                 break;
 
@@ -64,7 +64,7 @@ public class CategoriaController extends HttpServlet {
 
                 meusCategorias = categoriaDAO.getListaCategoria();
                 request.setAttribute("meusCategorias", meusCategorias);
-                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ListaCategoriaView.jsp");
+                RequestDispatcher aposexcluir = getServletContext().getRequestDispatcher("/ViewListaCateg.jsp");
                 aposexcluir.forward(request, response);
                 break;
         }

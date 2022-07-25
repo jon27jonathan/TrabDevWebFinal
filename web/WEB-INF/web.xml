@@ -2,95 +2,95 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>ValidarLogin</servlet-name>
-        <servlet-class>Controllers.ValidarLogin</servlet-class>
+        <servlet-class>Controlador.ValidarLogin</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Conexao</servlet-name>
-        <servlet-class>Model.Conexao</servlet-class>
+        <servlet-class>Modelo.Conexao</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FuncionarioDAO</servlet-name>
-        <servlet-class>Model.FuncionarioDAO</servlet-class>
+        <servlet-class>Modelo.FuncionarioDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FuncionarioController</servlet-name>
-        <servlet-class>Controllers.FuncionarioController</servlet-class>
+        <servlet-class>Controlador.FuncionarioController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CategoriaController</servlet-name>
-        <servlet-class>Controllers.CategoriaController</servlet-class>
+        <servlet-class>Controlador.CategoriaController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ClienteController</servlet-name>
-        <servlet-class>Controllers.ClienteController</servlet-class>
+        <servlet-class>Controlador.ClienteController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CompraController</servlet-name>
-        <servlet-class>Controllers.CompraController</servlet-class>
+        <servlet-class>Controlador.CompraController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FornecedorController</servlet-name>
-        <servlet-class>Controllers.FornecedorController</servlet-class>
+        <servlet-class>Controlador.FornecedorController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProdutoController</servlet-name>
-        <servlet-class>Controllers.ProdutoController</servlet-class>
+        <servlet-class>Controlador.ProdutoController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProdutoControllerCli</servlet-name>
-        <servlet-class>Controllers.ProdutoControllerCli</servlet-class>
+        <servlet-class>Controlador.ProdutoControllerCli</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VendaController</servlet-name>
-        <servlet-class>Controllers.VendaController</servlet-class>
+        <servlet-class>Controlador.VendaController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CategoriaDAO</servlet-name>
-        <servlet-class>Model.CategoriaDAO</servlet-class>
+        <servlet-class>Modelo.CategoriaDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ClienteDAO</servlet-name>
-        <servlet-class>Model.ClienteDAO</servlet-class>
+        <servlet-class>Modelo.ClienteDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CompraDAO</servlet-name>
-        <servlet-class>Model.CompraDAO</servlet-class>
+        <servlet-class>Modelo.CompraDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FornecedorDAO</servlet-name>
-        <servlet-class>Model.FornecedorDAO</servlet-class>
+        <servlet-class>Modelo.FornecedorDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProdutoDAO</servlet-name>
-        <servlet-class>Model.ProdutoDAO</servlet-class>
+        <servlet-class>Modelo.ProdutoDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProdutoDAOCli</servlet-name>
-        <servlet-class>Model.ProdutoDAOCli</servlet-class>
+        <servlet-class>Modelo.ProdutoDAOCli</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VendaDAO</servlet-name>
-        <servlet-class>Model.VendaDAO</servlet-class>
+        <servlet-class>Modelo.VendaDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Logout</servlet-name>
-        <servlet-class>Controllers.Logout</servlet-class>
+        <servlet-class>Controlador.Logout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>Controllers.Login</servlet-class>
+        <servlet-class>Controlador.Login</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RelatorioDAO</servlet-name>
-        <servlet-class>Model.RelatorioDAO</servlet-class>
+        <servlet-class>Modelo.RelatorioDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RelatorioController</servlet-name>
-        <servlet-class>Controllers.RelatorioController</servlet-class>
+        <servlet-class>Controlador.RelatorioController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Cliente</servlet-name>
-        <servlet-class>Controllers.Cliente</servlet-class>
+        <servlet-class>Controlador.Cliente</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ValidarLogin</servlet-name>

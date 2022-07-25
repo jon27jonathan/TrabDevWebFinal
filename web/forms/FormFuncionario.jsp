@@ -1,4 +1,4 @@
-<%@page import="Application.Funcionario"%>
+<%@page import="Aplicacao.Funcionario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

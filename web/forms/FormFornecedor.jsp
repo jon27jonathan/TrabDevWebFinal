@@ -1,5 +1,5 @@
-<%@page import="Application.Funcionario"%>
-<%@page import="Application.Fornecedor"%>
+<%@page import="Aplicacao.Funcionario"%>
+<%@page import="Aplicacao.Fornecedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
